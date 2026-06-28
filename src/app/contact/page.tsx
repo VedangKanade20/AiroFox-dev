@@ -10,7 +10,7 @@ export default function ContactPage() {
   const contactMethods = [
     {
       title: "Call Us",
-      value: "+91 XXXXX XXXXX",
+      value: "+919326065836",
       icon: Phone,
     },
     {
@@ -25,7 +25,11 @@ export default function ContactPage() {
     },
   ];
 
-  const areas = ["Lalbaug", "Parel", "Dadar", "Wadala", "Matunga", "Sion"];
+  const areas = ["Lalbaug", "Parel", "Dadar", "Matunga"];
+
+  const message = encodeURIComponent(
+    "Hi AiroFox, I need help with home services.",
+  );
 
   return (
     <>

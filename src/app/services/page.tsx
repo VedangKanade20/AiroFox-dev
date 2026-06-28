@@ -43,6 +43,9 @@ const services = [
 ];
 
 export default function ServicesPage() {
+  const message = encodeURIComponent(
+  "Hi AiroFox, I need help with home services."
+);
   return (
     <>
       <Header />
@@ -104,15 +107,23 @@ export default function ServicesPage() {
                     </div>
 
                     <div className="flex gap-4 mt-8 flex-wrap">
-                      <Button className="gap-2">
-                        <Phone size={18} />
-                        Call Now
-                      </Button>
+                      <a href="tel:+919326065836">
+                        <Button className="gap-2">
+                          <Phone size={18} />
+                          Call Now
+                        </Button>
+                      </a>
 
-                      <Button variant="whatsapp" className="gap-2">
-                        <FaWhatsapp size={18} />
-                        WhatsApp
-                      </Button>
+                      <a
+                        href={`https://wa.me/919326065836?text=${message}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="whatsapp" className="gap-2">
+                          <FaWhatsapp size={18} />
+                          WhatsApp
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </div>

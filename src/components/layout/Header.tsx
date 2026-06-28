@@ -21,7 +21,9 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <Button>Book Now</Button>
+          <a href="tel:+919326065836">
+            <Button>Book Now</Button>
+          </a>
         </div>
 
         <MobileMenu />

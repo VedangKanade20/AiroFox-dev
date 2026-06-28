@@ -14,6 +14,9 @@ const navLinks = [
 ];
 
 export default function MobileMenu() {
+  const message = encodeURIComponent(
+    "Hi AiroFox, I need help with home services.",
+  );
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -45,15 +48,23 @@ export default function MobileMenu() {
 
           {/* CTA */}
           <div className="mt-auto pb-8 space-y-4">
-            <Button className="w-full gap-2">
-              <Phone size={18} />
-              Call Now
-            </Button>
+            <a href="tel:+919326065836">
+              <Button className="w-full gap-2">
+                <Phone size={18} />
+                Call Now
+              </Button>
+            </a>
 
-            <Button variant="whatsapp" className="w-full gap-2">
-              <FaWhatsapp size={18} />
-              WhatsApp
-            </Button>
+            <a
+              href={`https://wa.me/919326065836/?text=${message}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="whatsapp" className="w-full gap-2">
+                <FaWhatsapp size={18} />
+                WhatsApp
+              </Button>
+            </a>
           </div>
         </div>
       </SheetContent>
