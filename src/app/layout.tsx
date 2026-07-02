@@ -1,25 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import StickyMobileCTA from "@/components/shared/StickyMobileCTA";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter", // optional but useful
 });
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "AiroFox",
+  title: "AiroFox - Fast & Reliable Home Services",
   description: "Fast & Reliable Home Services",
 };
 
@@ -33,7 +25,12 @@ export default function RootLayout({
       lang="en"
       className={inter.className}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Header />
+        {children}
+        <StickyMobileCTA />
+        <Footer />
+      </body>
     </html>
   );
 }
